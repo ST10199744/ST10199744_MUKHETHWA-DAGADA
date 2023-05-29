@@ -194,5 +194,246 @@ namespace Dagada_Mukhethwa_ST10199744
                 //    Console.WriteLine("No recipe to display. Please enter a recipe first.");
             }
         }
+
+        public void ScaleRecipe()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("====================================");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Wtite your scale as \n-|>for half,enter 1\n-|>for double enter 2\n-|>for thriple, enter 3");
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("=============================================");
+            Console.ForegroundColor = ConsoleColor.White;
+
+            String chose = Console.ReadLine();
+
+
+            if (chose == "1")
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine("=============================================");
+                Console.WriteLine("scale recipe");
+                Console.WriteLine("=============================================");
+                Console.ForegroundColor = ConsoleColor.White;
+                for (int c = 1; c < Recipename.Count; c++)
+                {
+
+                    Console.WriteLine((c) + ": " + Recipename[c]);
+
+
+                }
+                //select the number to display names
+                string prompt_number = "";
+                string get_name = "";
+                do
+                {
+
+
+                    //prompt the user for number
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.WriteLine("=============================================");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("choose recipe");
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.WriteLine("=============================================");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    prompt_number = Console.ReadLine();
+
+                    //get to search if theres number not letters
+                    if (!Regex.IsMatch(prompt_number, @"^\d+$"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("=============================================");
+                        Console.WriteLine("enter a digits");
+                        Console.WriteLine("=============================================");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else
+                    {
+                        //get the name
+                        get_name = Recipename[int.Parse(prompt_number)];
+
+                    }
+
+                } while (!Regex.IsMatch(prompt_number, @"^\d+$"));
+
+
+                Console.ForegroundColor = ConsoleColor.White;
+
+                //output using the ingredient generic
+                for (int x = 0; x < Ingredientname.Count; x++)
+                {
+
+                    //compare or check
+                    if (Ingredientname[x].Contains(get_name))
+                    {
+
+
+
+
+                        IngredientQuantity[x] = IngredientQuantity[x] * 0.5;
+
+
+                    }
+
+
+                }
+                Console.WriteLine("=============================================");
+                Console.WriteLine(" scale done");
+                Console.WriteLine("=============================================");
+            }
+            else if (chose == "2")
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine("=============================================");
+                Console.WriteLine("scale recipe");
+                Console.WriteLine("=============================================");
+                Console.ForegroundColor = ConsoleColor.White;
+                for (int c = 1; c < Recipename.Count; c++)
+                {
+
+                    Console.WriteLine((c) + ": " + Recipename[c]);
+
+
+                }
+                //select the number to display names
+                string prompt_number = "";
+                string get_name = "";
+                do
+                {
+
+
+                    //prompt the user for number
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.WriteLine("=============================================");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("choose recipe");
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.WriteLine("=============================================");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    prompt_number = Console.ReadLine();
+
+                    //get to search if theres number not letters
+                    if (!Regex.IsMatch(prompt_number, @"^\d+$"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("=============================================");
+                        Console.WriteLine("enter a digits");
+                        Console.WriteLine("=============================================");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else
+                    {
+                        //get the name
+                        get_name = Recipename[int.Parse(prompt_number)];
+
+                    }
+
+                } while (!Regex.IsMatch(prompt_number, @"^\d+$"));
+
+
+                Console.ForegroundColor = ConsoleColor.White;
+
+                //output using the ingredient generic
+                for (int x = 0; x < Ingredientname.Count; x++)
+                {
+
+                    //compare or check
+                    if (Ingredientname[x].Contains(get_name))
+                    {
+
+
+
+
+                        IngredientQuantity[x] = IngredientQuantity[x] * 2;
+
+
+                    }
+
+
+                }
+                Console.WriteLine("=============================================");
+                Console.WriteLine(" scale done");
+                Console.WriteLine("=============================================");
+            }
+            else if (chose == "3")
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine("=============================================");
+                Console.WriteLine("scale recipe");
+                Console.WriteLine("=============================================");
+                Console.ForegroundColor = ConsoleColor.White;
+                for (int c = 1; c < Recipename.Count; c++)
+                {
+
+                    Console.WriteLine((c) + ": " + Recipename[c]);
+
+
+                }
+                //select the number to display names
+                string prompt_number = "";
+                string get_name = "";
+                do
+                {
+
+
+                    //prompt the user for number
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.WriteLine("=============================================");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("choose recipe");
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.WriteLine("=============================================");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    prompt_number = Console.ReadLine();
+
+                    //get to search if theres number not letters
+                    if (!Regex.IsMatch(prompt_number, @"^\d+$"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("=============================================");
+                        Console.WriteLine("enter a digits");
+                        Console.WriteLine("=============================================");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else
+                    {
+                        //get the name
+                        get_name = Recipename[int.Parse(prompt_number)];
+
+                    }
+
+                } while (!Regex.IsMatch(prompt_number, @"^\d+$"));
+
+
+                Console.ForegroundColor = ConsoleColor.White;
+
+                //output using the ingredient generic
+                for (int x = 0; x < Ingredientname.Count; x++)
+                {
+
+                    //compare or check
+                    if (Ingredientname[x].Contains(get_name))
+                    {
+
+
+
+
+                        IngredientQuantity[x] = IngredientQuantity[x] * 3;
+
+
+                    }
+
+
+                }
+                Console.WriteLine("=============================================");
+                Console.WriteLine(" scale done");
+                Console.WriteLine("=============================================");
+            }
+            else
+            {
+                Console.WriteLine("");
+            }
+        }
     }
 }
