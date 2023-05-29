@@ -435,5 +435,19 @@ namespace Dagada_Mukhethwa_ST10199744
                 Console.WriteLine("");
             }
         }
+            public void ResetQuantities()
+            {
+                if (Recipename != null)
+                {
+
+
+                    Console.WriteLine("Quantities reset successfully!");
+                }
+                else
+                {
+                    Console.WriteLine("No recipe to reset quantities. Please enter a recipe first.");
+                }
+            }
+
+        }
     }
-}
