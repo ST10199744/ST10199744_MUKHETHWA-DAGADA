@@ -143,5 +143,56 @@ namespace Dagada_Mukhethwa_ST10199744
 
             Console.WriteLine("Recipe added successfully!");
         }
+
+
+        public void DisplayRecipe()
+        {
+            //if (Recipename != null)
+            //{
+            Console.ForegroundColor = ConsoleColor.Red;
+            Recipename.Sort();
+            for (int i = 0; i < Recipename.Count; i++)
+            {
+                Console.WriteLine((i + 1) + ": " + Recipename[i]);
+            }
+            //Console.WriteLine("Enter the name of recipe you want to view");
+            //int ans = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("ENTER THE NAME OF RECIPE YOU WANT TO DISPLAY");
+            string name = Console.ReadLine();
+
+            Console.WriteLine((1) + "Recipe name:" + name);
+            for (int m = 0; m < Ingredientname.Count; m++)
+            {
+                //if (Ingredientname.Contains(name) && Foodgroup.Contains(name))
+                // {
+
+
+                Console.WriteLine("Ingredient name: " + Ingredientname[m]);
+                Console.WriteLine("Ingredient Quantity: " + IngredientQuantity[m]);
+                Console.WriteLine("Ingredient unit " + Ingredientunits[m]);
+                Console.WriteLine("Food group: " + Foodgroup[m]);
+                Console.WriteLine("Caleries:" + Caleriescounts[m]);
+                Console.WriteLine("total calories" + (Caleriescounts[m] + Caleriescounts[m]));
+
+
+
+
+
+
+
+
+                for (int sps = 0; sps < steps.Count; sps++)
+                {
+
+                    Console.WriteLine((sps + 1) + ": " + steps[sps]);
+                }
+
+                //}
+                //else
+                //{
+                //    Console.WriteLine("No recipe to display. Please enter a recipe first.");
+            }
+        }
     }
 }
